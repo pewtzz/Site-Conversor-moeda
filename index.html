@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Conversor de Moedas</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./scripts.js" defer></script>
 
 </head>
     <header>
@@ -19,9 +20,11 @@
         <label>
             Convert <b>from</b>
 
-            <select>
+            <select class="from">
 
-                <option> BRL </option>
+                <option value="BRL"> BRL </option>
+                <option value="EUR"> EUR </option>
+                <option value="USD"> USD </option>
 
             </select>
 
@@ -30,10 +33,11 @@
         <label>
             Convert <b>to</b>
 
-            <select>
+            <select class="to">
 
-                <option> USD </option>
-                <option> EUR </option>
+                <option value="USD"> USD </option>
+                <option value="EUR"> EUR </option>
+                <option value="BRL"> BRL </option>
 
             </select>
 
@@ -41,24 +45,24 @@
 
         <label>
             Value
-            <input placeholder="O resultado aparece aqui">
+            <input class="mainInput" placeholder="O resultado aparece aqui">
         </label>
 
-        <button> Convert </button>
+        <button class="cButton"> Convert </button>
 
         <section>
             <div class="box1">
                 <img class="imgbrasil" src="./assets/Brasil-Real.png">
-                <p class="coin">BRL</p>
-                <p class="value">Value</p>
+                <p class="coin" id="firstCountry">BRL</p>
+                <p class="value" id="valueToBeConverted">Value</p>
                 
                 
             </div>
             <img class="imgarrow" src="./assets/Vector.png">
             <div class="box2">
                 <img class="imgeuro" src="./assets/Euro.png">
-                <p class="coin">EUR</p>
-                <p class="value">Value</p>
+                <p class="coin" id="lastCountry">EUR</p>
+                <p class="value" id="finalValue">Value</p>
 
             </div>
 
